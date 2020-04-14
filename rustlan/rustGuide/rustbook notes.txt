@@ -1,0 +1,26 @@
+# rustc compiler
+when writing simple rust codes, you can compile it using rustc:
+	rustc __rsfilename__ : this will compile the rourcecode & give you an executable
+
+# cargo
+cargo is a compiler and project manager for rust, it does most things for you; managing dependencies and etc.
+	cargo new __rsprojectname__ : this will create a rust project for you with all required files
+	cargo build: Compile your projects, new folder were exec file is located(.\target\debug\hello_cargo.exe
+		create a cargo.lock file - wich basically freeze all your depency to their current version
+		you can build any project from git, by cloning it, and cargo build it.
+	cargo run: Compile and run project, you don't have to navigate to exec file
+	cargo check: faster then build, does not produce exec file, used to check if file will compile
+
+# variables
+in rust you must declare your varibles, they are immutable by default.
+	let variable_name = value; - create an immutable variable
+		varible_name = newvalue >> error, variable name is immutable
+	let mut variable_name2 = 2
+		variable_name2 = 4 >> works
+		varible_name2 = "hello" >> error, wrong data type
+shadowing: create a new variable with the same name, allows to change variable data type
+	let num_candy = "six"
+	let num_candy = 6 - num_candy's value is the last initialised one
+constants
+it's like an immutible variable, but it is always immutable. name is always upper case
+	const CONST_NAME: Type = init; - you must specify data type of the Const

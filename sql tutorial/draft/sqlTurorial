@@ -1,0 +1,106 @@
+########## getting started ################
+
+#start/stop mariadb on linux
+    sudo systemctl start/stop mariadb
+
+#connect to mariadb from terminal
+    mariadb -u user_name -p
+    enter password
+
+########### SQL Synthax  ##################
+
+************ working with table *********
+#SQL data types
+    INT -- whole number
+    DECIMAL(total_digits, digits_after_point) -- decimal num - exact value
+    VARCHAR(n) -- string of text of length n
+    BLOB -- banary large objects (image, files python objects, etc)
+    DATE -- 'YYYY-MM-DD'
+    TIMESTAMP -- 'YYYY-MM-DD HH:MM:SS'
+
+#Creating db table
+    CREATE TABLE tb_name (
+        # column_name data_type,
+        student_id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(20) KEY_WORD, # you can pass in keywords that tell mysql how to treat the column
+    major VARCHAR(30) DEFAULT 'default_value',
+        # PRIMARY KEY(student_id, anotherColumn)
+    );
+    ---------------------
+    keywords:
+    constraints:
+        NOT NULL = tell mysql that the database can never be null
+        UNIQUE = no other row can have the save value for this column
+    default:
+        DEFAULT default_value
+    auto increment:
+        AUTO_INCREMENT = verytime a new value entry is enterered mysql increment the value under the keyword
+         - often used for primary key
+         - you don't have to manually insert item with this keyword
+         - useful for table id
+
+    ****** Inserting data *********
+        #Inserting new value to a column
+            INSERT INTO student VALUES(
+                1, 'Jack', 'Biology', 3.42
+            );
+            
+            # when some column have no value, you can specifie those that do only
+            INSERT INTO student(student_id, name, gpa) VALUES(
+                3, 'Karen', 1.6
+            );
+
+
+#Delete and update db table
+    # update a specific value:
+        UPDATE table_name
+        SET column_name = 'new value' # you can set multiple things(colums)
+        WHERE column_name operations 'old value'; the column here does not have to be the same as previous
+            - operations: <,=,>,<=,>= and <> : not equal
+
+        you can also extend the where process with boolean expressions
+        exp:
+        SET column_name = 'new value' OR another_column = 'value'
+
+    # update all values
+        !!! if no WHERE process is given change affect all that meet condition!!!
+
+    # delete specific/groupe of row
+        DELETE FROM STUDENT # this if ran alone will delete everything in the table
+        WHERE column_name operation 'value';
+
+    # Delete table 
+        DROP tb_name;
+
+    # add and delete a new column
+        ALTER TABLE tb_name ADD column_name data_type;
+        ALTER TABLE tb_name DROP column_name;
+
+
+************ Getting information *********
+ # basic queries
+
+    #See schema of a table
+        DESCRIBE tb_name;
+
+    # Selecting specific columns
+        SELECT * # or you give the column_name (or tb_name.column_name), you can also selct many columns at once just separate them with ","
+        FROM table_name;
+
+        # if ou want result ordered alpahabetically or numerically
+        SELECT Column1, column2 ...
+        FROM table_name
+        ORDER BY column2; # you can pass DESC at the end if you want the result in descending order, you can also order by many columns
+        LIMIT n; you can limit remove ";" from previous line
+
+    # Selecting columns with conditions
+        SELECT *
+        FROM tb_name
+        WHERE column4 = "value"; # you can also use "AND, OR" to add more conditions
+
+        # Select based on values
+        SELECT *
+        FROM tb_name
+        WHERE column IN ('value1', 'value2'); # will return when the name is in this array of values
+        
+        !!!! you have to combine the SELECT, WHERE, IN, LIMIT in order to get what you want !!!!

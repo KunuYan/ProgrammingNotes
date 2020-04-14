@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "connectionTimeout": 60,
+            "database": "company_db",
+            "dialect": "MariaDB",
+            "name": "companydb",
+            "password": "47h_m@luaA24",
+            "port": 3306,
+            "server": "localhost",
+            "username": "joelly"
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+Terminal base type of applications:
+    - present user with a menu
+    - promp user for input based on choice
+    -call a function based on the choice, that function call on a logic parts's function
+    - output result you got from the function and prompt for next input
+    
+    !! Basically Kali linux hacking tools are mostly CLI !!
+
+Python has tools that make cli easier to build and to make it more effective
+    - cmd module is a module for buiilding cli quickly, must use OOP, check out cli_cmd.py for more info.
+    - just like how terminall command can have arguments like --help, -v we can also do it for our python cli program with argparse modul, check out ttc_cli_cmd.py
+    - can also add in tkinter.messagebox to display information without going full GUI, check out ttc_tkdialogue_cli.py

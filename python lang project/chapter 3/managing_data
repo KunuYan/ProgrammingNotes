@@ -1,0 +1,59 @@
+
+###### Creating and Reading----------
+
+Using python:
+--use shelve module --
+
+# DBM module 
+dbm module use persitence dictionary dbms. it determines wich dictionary dbm to use by itself base on the os, or use a pure python one if none is found. basically we just create a db and add items using a key(wich normaly is id_of_item_in_that_db in str) and a value(row of data converted to string with each item separated by comma). After you create a db, dbm creates 3 files, one with actual data, other 2 help dbm index data of that db. CHECK create_lendy.ipnb DB for more info.
+
+# pickle module
+Unlike dbm module that only work on string data type, pickle allows the data to be
+of any type, because it converts them into python binaries (serialization). And when
+retrieving the data, it converts them back into whatever type they were.
+The only issue with pickle is that  to access data you have to read the whole db file. CHECK usingPickle.ipynb
+
+# shelve module
+working with shelve is easy. Shelve allows random access like dbm and
+allow you to save all type of data like pickle(even python objects). ofcourse
+this has security risks. check withShelve.ipynb
+
+
+Using dabase management system:
+
+
+# sqlite
+the database is actually written on a file so storage is limited, python module is standard. Good for small applications. Check chapter 3 for more info
+
+# mariadb
+Database is on a server, great for large application with alot of data. also has has a python library but not standard. Easier to use for me. check sql tutorial folder for more.
+
+
+########### Analizing--------------
+
+# Standard python
+You can use dictionary slicing indexing and other python methode to access your data. Check analyzing data
+
+# itertools
+A python module wich main purpose is to help with menaging data. Check  analizing-itertools for more info.
+
+
+############ API---------------------
+Now that a database has been created, we neeed to create a interface to interact with the databse. A databaseAPI is basically a module we make that has functions to C.R.U.D data from the database, initialize the database and close the db. you can create others func too based on what you need to do with the database and you should also have access to the cursor. Check lendydbAPI for reference.
+
+
+############## other data management options -------
+#Client‐Server Databases:
+Relational based database management systems.
+MySQL, PostGres, mariadb, Firebird and corparate dbs, like oracle, SQL server and DB2.
+
+# NoSQL:
+Stand for not only sql, with data volume incresing faster technique for retriving data are  necessary. Some examples of NoSQL approaches (with typical
+implementations) are Document (MongoDB), Key‐Value (Dynamo), Columnar (HBase), and Graphs (Allegro)
+
+# the Cloud
+Avoid unless necaissary.
+
+# Processing the data
+learn R programming data or use the python to R interface called Rpy from Pypi.
+

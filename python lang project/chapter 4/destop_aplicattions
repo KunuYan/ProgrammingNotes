@@ -1,0 +1,20 @@
+ - An applications contains multiples files that each do specifique task
+ - the work can be split how ever the programmer wants, but usually for simple applications there are split into 4 parts:
+ 
+            API(s):
+                -contains functions and methodes that can query the database to retrieve or insert data so that it can be used without doing tidious things(writing sql every time).
+                -C.R.U.D. (create, read, update and delete)
+            file(s) that interract with data:
+                -contains functions to store and retrieve data that the logic file needs.
+                -interacts with the API to do what it needs
+            logic(s):
+                - files that do all the processing and calculations
+                - servers files
+                - tell other files what to do, retrieve data from them and process those data
+            client(s):
+                - Part of the appliction that interacts with user
+                - output and input data to and from the user
+                - call on functions from the logic part in order to do something with the input
+                - output and prompt user based on the result it got from calling the logic functions
+                - can be a command line interface(CLI) or GUI
+ 

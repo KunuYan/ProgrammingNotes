@@ -49,7 +49,8 @@ fn main() {
     println!("the value of var2 is: {}", var2);
 
     // Array Type (fixed length and values have same data type)
-    let ar = [1, 2, 3, 4, 5];
+    let ar = [1, 2, 3, 4, 5]; // data type was not specified but all have same data type
+    let arr:[i32;5] = [1,2,3,4,5]; // data type and length is specified
     // array_name: [item_data_type; number_of_item] = [...]
     let months = ["January", "February", "March", "April", "May", "June", "July",
         "August", "September", "October", "November", "December"];

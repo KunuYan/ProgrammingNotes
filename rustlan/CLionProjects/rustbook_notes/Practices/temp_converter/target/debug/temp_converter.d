@@ -1,0 +1,1 @@
+/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/Practices/temp_converter/target/debug/temp_converter: /home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/Practices/temp_converter/src/main.rs

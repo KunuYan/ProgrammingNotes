@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="rustbook_notes"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rustbook_notes">
+				<Option output="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/rustbook_notes" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 rustbook_notes"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rustbook_notes/fast">
+				<Option output="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/rustbook_notes" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/x86_64-pc-linux-gnu"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/../../../../include/c++/9.3.0/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/9.3.0/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 rustbook_notes/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/Cargo.lock">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/Cargo.toml">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/src/main.rs">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/target/debug/data_types">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/target/debug/data_types.d">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/target/debug/deps/data_types-257e8842d07cdcf9">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/target/debug/deps/data_types-257e8842d07cdcf9.d">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/target/debug/incremental/data_types-3m2xc6i4jm7x7/s-fl0m5o3y06-1ehzl62-14k4ab3miqcf7/19nm1ul51pap84j6.o">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/target/debug/incremental/data_types-3m2xc6i4jm7x7/s-fl0m5o3y06-1ehzl62-14k4ab3miqcf7/1bk38ol4js45kwme.o">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/target/debug/incremental/data_types-3m2xc6i4jm7x7/s-fl0m5o3y06-1ehzl62-14k4ab3miqcf7/1lwa8h31pmg4vsoy.o">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/target/debug/incremental/data_types-3m2xc6i4jm7x7/s-fl0m5o3y06-1ehzl62-14k4ab3miqcf7/2z22dr7u1t205qga.o">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/target/debug/incremental/data_types-3m2xc6i4jm7x7/s-fl0m5o3y06-1ehzl62-14k4ab3miqcf7/3b6huvoqrd0zo243.o">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/target/debug/incremental/data_types-3m2xc6i4jm7x7/s-fl0m5o3y06-1ehzl62-14k4ab3miqcf7/44a9m65e1rw60ncg.o">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/target/debug/incremental/data_types-3m2xc6i4jm7x7/s-fl0m5o3y06-1ehzl62-14k4ab3miqcf7/4rf7fcdscvndqx68.o">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/target/debug/incremental/data_types-3m2xc6i4jm7x7/s-fl0m5o3y06-1ehzl62-14k4ab3miqcf7/dep-graph.bin">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/target/debug/incremental/data_types-3m2xc6i4jm7x7/s-fl0m5o3y06-1ehzl62-14k4ab3miqcf7/query-cache.bin">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/target/debug/incremental/data_types-3m2xc6i4jm7x7/s-fl0m5o3y06-1ehzl62-14k4ab3miqcf7/work-products.bin">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/data_types/target/debug/incremental/data_types-3m2xc6i4jm7x7/s-fl0m5o3y06-1ehzl62.lock">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/funtions/Cargo.lock">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/funtions/Cargo.toml">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/funtions/src/main.rs">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/Cargo.lock">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/Cargo.toml">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/src/main.rs">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/RustBookNotes">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/RustBookNotes.d">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/deps/RustBookNotes-69638293f95580e1">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/deps/RustBookNotes-69638293f95580e1.d">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/incremental/RustBookNotes-ooos01cvfuck/s-fklqcbrvzc-tl070e-1xtl08pbq89ed/1d3odlrbj0ve6rp9.o">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/incremental/RustBookNotes-ooos01cvfuck/s-fklqcbrvzc-tl070e-1xtl08pbq89ed/1hcwsckma26024sl.o">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/incremental/RustBookNotes-ooos01cvfuck/s-fklqcbrvzc-tl070e-1xtl08pbq89ed/1jqak1p8zr5jvsfe.o">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/incremental/RustBookNotes-ooos01cvfuck/s-fklqcbrvzc-tl070e-1xtl08pbq89ed/2jlqzbsm3p3694a4.o">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/incremental/RustBookNotes-ooos01cvfuck/s-fklqcbrvzc-tl070e-1xtl08pbq89ed/4bmwuu3rvtwo284f.o">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/incremental/RustBookNotes-ooos01cvfuck/s-fklqcbrvzc-tl070e-1xtl08pbq89ed/4hqo2a4ilsc3qv64.o">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/incremental/RustBookNotes-ooos01cvfuck/s-fklqcbrvzc-tl070e-1xtl08pbq89ed/4jli60dzlppe8der.o">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/incremental/RustBookNotes-ooos01cvfuck/s-fklqcbrvzc-tl070e-1xtl08pbq89ed/4mfhwlxv6l2m6wgr.o">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/incremental/RustBookNotes-ooos01cvfuck/s-fklqcbrvzc-tl070e-1xtl08pbq89ed/6qt2yo4k6lqm2fh.o">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/incremental/RustBookNotes-ooos01cvfuck/s-fklqcbrvzc-tl070e-1xtl08pbq89ed/dep-graph.bin">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/incremental/RustBookNotes-ooos01cvfuck/s-fklqcbrvzc-tl070e-1xtl08pbq89ed/query-cache.bin">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/incremental/RustBookNotes-ooos01cvfuck/s-fklqcbrvzc-tl070e-1xtl08pbq89ed/work-products.bin">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/variables/target/debug/incremental/RustBookNotes-ooos01cvfuck/s-fklqcbrvzc-tl070e.lock">
+			<Option target="rustbook_notes"/>
+		</Unit>
+		<Unit filename="/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

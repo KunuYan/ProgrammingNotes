@@ -16,3 +16,4 @@ httpd.serve_forever()
 # you can even spin up a quick http server with a simple python command
 # goto the directory you want and type the command below with whatever port you choose
 # python ‐m http.server 8000
+# http module also has a http.client if you want to establish a proxy connection

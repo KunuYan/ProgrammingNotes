@@ -1,0 +1,7 @@
+1. Write tests first.
+2. All tests should fail at first.
+3. Write code.
+4. Test code against tests.
+5. Rewrite code.
+6. Retest code against tests.
+7. Repeat until all tests are passing.

@@ -1,0 +1,80 @@
+______________________________________________________________________
+Starting the app:
+***** starting the app by using environement variables ---
+# before running the app, we need to set an environement variable to the file that will be our app
+    export FLASK_APP=<name_of_app_file>.py
+
+# nowe you can start app
+    flask run
+
+# to get the server to show changes without restarting, run server in debug mode
+    export FLASK_DEBUG=1 
+
+***** starting the app using python
+# set an conditional to __main__
+    if __name__ == '__main__':
+        app.run()  # you can set debug=True
+
+_______________________________________________________________________
+Routing:
+***** Routing using decorators
+# routing in flask is easy, flask will an app.route decorateor to the befunction it decorates
+    @app.route('/about')
+
+# the you have a function associated to the route bellow it
+    @app.route('/about')
+    @app.route('/visit_us') # a func can have be associated to many routes
+    def about():
+        return '<h1>About Page</h1>'
+
+_______________________________________________________________________
+templates:
+***** displaying our html content
+# when a route is accessed, return a html file
+    @app.route('/visit_us') # a func can have be associated to many routes
+    def about():
+        return render_template('html_file.html') # btw all templates(html files) should be stored in a templates folder
+
+***** accessing our data inside a template
+# in order to access data from a db or api inside the template we need to create a variable inside render_template() func, and give that variable data
+    return render_template('html_file.html', <name_uwill_useto_callit_intemplate>=<name_ofdata_objectin_mypyfile)
+    --- now inside html_file.html you can access the object(wich btw includes functions) from your python process, you will call it <name_uwill_useto_callit_intemplate> instead
+
+# now inside the template use {{}} to access your data
+    <p>{{ <name_uwill_useto_callit_intemplate> }}</p>
+    --- if your object is collectable(list, dict etc), you can loop, index and use dot notions on them(dict.key)
+
+# writting if and for loops  in templates
+    {% for data in dataIaccessed %}
+    {% endfor %} # always end code block
+
+    {% if condition%}
+    {% else %}
+    {% endif%} # always end code block
+
+***** template inheritance
+# instead of rewritting the same code over and over, have a base template that other templates will inherit from
+# Since most pages looks the same, other templates will just a specific spot that they can change
+# the base template should be called layout.html
+# to specify where where other templates can overide
+    {% block bock_name_of_choice%}{% ednblock %}
+    --- the base template can have as many block code as you want
+
+# for other template to inherit from layout.html
+    {% extends "layout.html" %}
+# then you have to specifie wich block to overide
+    {% block block1_name %}
+        ...
+    {% ednblock %} 
+    % block bock2_name %}
+        ...
+    {% ednblock %}    
+
+***** accesing link in flask
+# import url_for from flask in your main python file, you can access url_for in your templete with {{}}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    --- we looked for a main.css file in our static folder, since all css should be located there
+    --- it's better access paths like this, since paths can be different based on where the code is ran
+
+    _______________________________________________________________________
+    

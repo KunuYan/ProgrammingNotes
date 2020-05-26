@@ -76,5 +76,52 @@ templates:
     --- we looked for a main.css file in our static folder, since all css should be located there
     --- it's better access paths like this, since paths can be different based on where the code is ran
 
-    _______________________________________________________________________
+_______________________________________________________________________
+Working with forms:
+***** creating templates using flask-wtf
+# when building websites, most of the time you don't have to re-invet the wheel, they are packages that do common stuffs for you
+# creating forms(sign up form, login form and etc) is easy with flask-wtf
+# btw the forms you make with flaskwtf will be translated from our class objects to html codes that we can pass to atemplates
+    pip instal flask-wtf
+
+# Every forms are usually kept in a form.py file so make one then:
+    from flask_wtf import FlaskForm
+    --- each form(code for a template) you make will inherit from FlaskForm class
+    class LoginForm(FlaskForm):
+        email = StringField('Email',
+                        validators=[DataRequired(), Email()])
+        password = PasswordField('Password',
+                            validators=[DataRequired()])
+
+    --- and indide each form class we create fields(password box, username box and etc), and save them into variables
+    --- check out forms.py for more exemple
+
+
+# now inside our app.py, we want to give the form to our template when routing the page
+    form = NameOfFormClass_FromFormsPyFile()
+    return render_template('template.html', form=form)
+
+
+# now inside the specified templates, inside a form tog(<form>) you can access form data like so:
+    {{ form.FieldThatWeWant(class="YouCanPassYourCSSStyleHere") }} # this could be a password box for exemple
+    --- basically flaskwtf is a package that writes html for us(called forms) and we pass those forms to our template
+    --- Check register.py for reference, explore flaskwtf and other package like it
+
+_______________________________________________________________________
+redirect and flash:
+***** redirect
+# it's like render_template(), but it redirect to a different route
+    return redirect(url_for('FunctionAssociatedWithUrl'))
+
+***** flash
+# quick message box (like those error message you see when you enter wrong user info)
+# inside you app file
+    flash('message')
+
+
+# inside your template
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    --- the you want to loop through those messages and print them
+    --- check layout.html
+
     

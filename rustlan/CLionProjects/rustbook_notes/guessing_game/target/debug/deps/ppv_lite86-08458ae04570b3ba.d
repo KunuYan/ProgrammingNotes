@@ -1,0 +1,11 @@
+/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/guessing_game/target/debug/deps/ppv_lite86-08458ae04570b3ba.rmeta: /home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/lib.rs /home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/soft.rs /home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/types.rs /home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/x86_64/mod.rs /home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/x86_64/sse2.rs
+
+/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/guessing_game/target/debug/deps/libppv_lite86-08458ae04570b3ba.rlib: /home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/lib.rs /home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/soft.rs /home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/types.rs /home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/x86_64/mod.rs /home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/x86_64/sse2.rs
+
+/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/guessing_game/target/debug/deps/ppv_lite86-08458ae04570b3ba.d: /home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/lib.rs /home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/soft.rs /home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/types.rs /home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/x86_64/mod.rs /home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/x86_64/sse2.rs
+
+/home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/lib.rs:
+/home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/soft.rs:
+/home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/types.rs:
+/home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/x86_64/mod.rs:
+/home/joelly/.cargo/registry/src/github.com-1ecc6299db9ec823/ppv-lite86-0.2.8/src/x86_64/sse2.rs:

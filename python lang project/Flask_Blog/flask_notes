@@ -124,4 +124,97 @@ redirect and flash:
     --- the you want to loop through those messages and print them
     --- check layout.html
 
-    
+
+_______________________________________________________________________
+Database with flask:
+***** using simply flask
+# you first want to import your db's api
+# from dlask import g (g object help with managing db)
+
+# in your app.config you want to put a db value(remember app.config is a dict)
+    app.config.update(dict(DATABASE=<pathtodatabase>))
+    or
+    app.config['DATABASE'] = <pathtodatabase>
+
+# now you just create a helper function that will do all for you
+    # connect our database to the logic
+    def get_db():
+        """ Opens a new database connection if one does not exit for our current
+        request context (the g objects helps with this task)"""
+
+        if not hasattr(g, 'sqlite_db'):
+            <dbAPI>.initDB()
+            g.sqlite_db = dbname.db
+        return g.sqlite_db
+
+
+    @app.teardown_appcontext
+    def close_db(error):
+        """Closes the database again at the end of the request. Note the 'g'
+        object which makes sure we only operate on the current request."""
+
+        if hasattr(g, 'sqlite_db'):
+            <dbAPI>.closeDB()
+
+# now from your app.route functions you an call the dbAPI funtions and it should work 
+
+***** using SQLAlchemy
+# SQLAlchemy is a python package that let you interact with all types of sql bdms
+# You pass it your db and it allows you to interact with your db.tables like they're a python class
+# import SQLAlchemy
+    from flask_sqlalchemy import SQLAlchemy
+
+# specify the URI for our db
+    sqlite:
+        sqlite:///<pathtodbfile>/dbname.db
+    mysql/mariadb/posgreSQL:
+        mysql://username:password@server/dbname
+
+# then initialise database
+    db = SQLAlchemy(app)
+
+# to create tables
+    class User(db.Model):
+        id = db.Column(db.Integer, primary_key=True)
+        username = db.Column(db.String(20), unique=True, nullable=False)
+        email = db.Column(db.String(120), unique=True, nullable=False)
+        image_file = db.Column(db.String(20), nullable=False, default='default.jpg')
+        password = db.Column(db.String(60), nullable=False)
+        posts = db.relationship('Post', backref='author', lazy=True) # here we use uper case Post cause it's calling the Post class
+        # this will allow use to see all the post by a user
+
+        def __repr__(self):
+            return f"User('{self.username}', '{self.email}', '{self.image_file}')" # what is return when table is called
+
+
+    class Post(db.Model):
+        id = db.Column(db.Integer, primary_key=True)
+        title = db.Column(db.String(100), nullable=False)
+        date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+        content = db.Column(db.Text, nullable=False)
+        user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False) # here we use lower case user cause it's a query
+
+        def __repr__(self):
+            return f"Post('{self.title}', '{self.date_posted}')"
+
+# quering with SQLAlchemy
+#now in our app.route functions we can work with the db object
+# use session to add new objects into our db
+    user_1 = User(username='Jon doe', email='jdoe@gmail.com', password='password')
+    db.session.add(user_1)
+
+# when we finish making change, we must commit for it to take effect
+    db.session.commit()
+
+# quering exemples
+User.query.all()
+User.query.filter_by(username='Joelly').all()
+user = User.query.filter_by(username='Joelly').first()
+print(user)
+ >> User('Joelly', 'j.ekomalet@gmail.com', 'default.jpg')
+user.id
+user.email
+user = user.query.get(1)
+print(user)
+ >> User('Joelly', 'j.ekomalet@gmail.com', 'default.jpg')
+user.posts

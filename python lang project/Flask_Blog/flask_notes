@@ -218,3 +218,4 @@ user = user.query.get(1)
 print(user)
  >> User('Joelly', 'j.ekomalet@gmail.com', 'default.jpg')
 user.posts
+

@@ -219,3 +219,12 @@ print(user)
  >> User('Joelly', 'j.ekomalet@gmail.com', 'default.jpg')
 user.posts
 
+_______________________________________________________________________
+Packaging your projects:
+***** why package your flask projects
+# in order to avoid circular import errors, that happens when
+the main.py, imports from a file that import a value from main.py,
+before the main.py runs completely.
+
+# put all our codes inside a package inside our folder.
+In the packages __init__.py file, initialize our database, import the main app and routes.

@@ -228,3 +228,41 @@ before the main.py runs completely.
 
 # put all our codes inside a package inside our folder.
 In the packages __init__.py file, initialize our database, import the main app and routes.
+
+_______________________________________________________________________
+User authentications
+***** hashing password
+# using bcrypt, it encryptes into bytes wich is why we decode it into strings
+    hashed_pw = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
+
+# check if password match encrypted password
+    bcrypt.check_password_hash(user.password, form.password.data)
+    bcrypt.check_password_hash(hashed_pw, 'password123')
+
+***** authentications using flask_login
+# use login mnager from flask_login, inside our __init__ file
+    from flask_login import LoginManager
+
+    login_manager = LoginManager(app) # it takes in the instase of our flask_app
+    login_manager.login_view = 'login'
+    login_manager.login_message_category = "info"
+
+# now inside routes.py
+    from flask_login import login_user, current_user, logout_user, login_required
+
+# we want to login user
+    user = User.query.filter_by(email=form.email.data).first() # check if username exist in database
+    if user and bcrypt.check_password_hash(user.password, form.password.data): # chack that password match the one in database
+        login_user(user, remember=form.remember.data) # login user
+
+
+# current_user object allow us access to user info and status
+    current_user.is_authenticated
+
+
+# to logout
+    logout_user() # no need to pass anything
+
+# to block guest from accessing links that requires authentication, use the login_required operators before the route
+    @login_required
+    def account('/account'):

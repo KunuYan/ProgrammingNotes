@@ -107,6 +107,9 @@ Working with forms:
     --- basically flaskwtf is a package that writes html for us(called forms) and we pass those forms to our template
     --- Check register.py for reference, explore flaskwtf and other package like it
 
+!!! If your form seems like it's doing nothing, check the encoding in the tenmplates !!
+    enctype="multipart/form-data" in your <div> class
+
 _______________________________________________________________________
 redirect and flash:
 ***** redirect

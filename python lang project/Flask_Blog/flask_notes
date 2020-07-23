@@ -169,9 +169,9 @@ Database with flask:
 
 # specify the URI for our db
     sqlite:
-        sqlite:///<pathtodbfile>/dbname.db
+        'sqlite:///<pathtodbfile>/dbname.db'
     mysql/mariadb/posgreSQL:
-        mysql://username:password@server/dbname
+        'mysql://username:password@server/dbname'
 
 # then initialise database
     db = SQLAlchemy(app)
@@ -200,11 +200,20 @@ Database with flask:
         def __repr__(self):
             return f"Post('{self.title}', '{self.date_posted}')"
 
+# sqlalchemy data types
+    Integer, String(size), Text, DateTime, Float, Boolean, PickleType, LargeBinary
+    
+# once models are made, use create all to create those tables
+    db.create_all()
+
 # quering with SQLAlchemy
 #now in our app.route functions we can work with the db object
 # use session to add new objects into our db
     user_1 = User(username='Jon doe', email='jdoe@gmail.com', password='password')
     db.session.add(user_1)
+    
+# at this stage changes are not commited yet, we we can undo it
+    session.rollback()
 
 # when we finish making change, we must commit for it to take effect
     db.session.commit()
@@ -212,6 +221,10 @@ Database with flask:
 # quering exemples
 User.query.all()
 User.query.filter_by(username='Joelly').all()
+User.query.filter_by(username='Joelly').delete()
+User.query.count()
+User.query.join('shdihds')
+User.query.get(ID)
 user = User.query.filter_by(username='Joelly').first()
 print(user)
  >> User('Joelly', 'j.ekomalet@gmail.com', 'default.jpg')
@@ -221,6 +234,14 @@ user = user.query.get(1)
 print(user)
  >> User('Joelly', 'j.ekomalet@gmail.com', 'default.jpg')
 user.posts
+
+# if they are from different models
+    session.query(User).join(Posts)
+# you can chain the commands
+    User.query
+        .filter_by(username='Joelly')
+        .filter_by(email='jknasjk')
+        .first()
 
 _______________________________________________________________________
 Packaging your projects:

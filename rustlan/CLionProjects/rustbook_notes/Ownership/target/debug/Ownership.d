@@ -1,0 +1,1 @@
+/home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/Ownership/target/debug/Ownership: /home/joelly/Documents/ProgrammingNotes/rustlan/CLionProjects/rustbook_notes/Ownership/src/main.rs

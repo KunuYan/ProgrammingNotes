@@ -1,0 +1,7 @@
+ 
+ sudo su postgres -l 'startup postgress and enter shell, default user to login user's account'
+ psql dbname 'psql is the cli for postgres, you can pass in username'
+ \l 'list database'
+ \dt 'list tables'
+ \d tablename 'view table schema'
+ \c dbname 'connect to a diffent db, without disconnecting the otherone'

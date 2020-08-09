@@ -110,6 +110,60 @@ Working with forms:
 !!! If your form seems like it's doing nothing, check the encoding in the tenmplates !!
     enctype="multipart/form-data" in your <div> class
 
+ ______________________________________________________________________
+ getting user input:
+ ***** request.args
+ # for getting data url parameters, exemple:
+    https://www.youtube.com/watch?reload=9&v=803Ei2Sq-Zs&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=7
+    value1 = request.args.get('list', '') >> playlist of the video
+    we have to create routes for all those args
+    
+ ***** request.form
+# for getting form inputs uses, exemple:
+    username = request.form.get('username')
+    or
+    username = request.form['username']
+    check out request documentation to learn more
+    
+***** Flaskform for flask_wtf module
+# for getting form inputs uses, exemple:
+    username=form.username.data, email=form.email.data
+    check out Flask_Blog for reference
+    
+*****  request.data
+    for getting data type, exemple:
+    data_string = request.data
+    data_dictionary = json.loads(data_strings)
+    !! learn how to use this, as this is the modern way!!
+    
+***** Data request
+# Are either synchronous or asynchronous(async)
+        -async: data sent to server and back without user needing to refresh
+        -Async request(Ajax request) use the Fetch method
+        
+# this is what a fetch() request to a server may lokk
+    fetch('url', {
+        method: 'Post',
+        body: JSON.stringify({
+            'description: 'some description'
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    
+***** learn more about flask-cors for security
+# using app.after_request(), for flask-cors
+# handling different methods
+    GET with parameters and pagination, POST, PATCH, DELETE
+    Basic error handling(abort)
+# using app.errorhandler()
+    takes a status code, and you shoul return parseble data to the client (json)
+    
+***** API testing
+# create a unittest.Testcase object, to test all your functionality at once.
+    
+
 _______________________________________________________________________
 redirect and flash:
 ***** redirect
@@ -120,7 +174,6 @@ redirect and flash:
 # quick message box (like those error message you see when you enter wrong user info)
 # inside you app file
     flash('message')
-
 
 # inside your template
     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -242,6 +295,20 @@ user.posts
         .filter_by(username='Joelly')
         .filter_by(email='jknasjk')
         .first()
+
+***** migrations, besically git for our database schema.
+    - db migrate - vreate a new script template to fill out
+    - db upgrade - apply unappliend migrations
+    - db downgrade - rollback applied migrations
+# For flask we will use Flask-Migrate for our migration manager for migrating SQLAlchemist-based database changes
+# Flask-Script to run migration scripts we defined from the terminal
+! read the docs: https://flask-migrate.readthedocs.io
+                             https://alembic.sqlalchemy.org 
+# using Flask-Migrate
+    -after setting up the migration manager, create your initial migration
+    -everytime you delete or make change to the database(sqlalchemy model), run flask db migrate(it works like git add)
+    -if you are happy with the change run flask db upgrade(or rollback if unhappy)
+# we dont have to call db.session.create_all() anymore
 
 _______________________________________________________________________
 Packaging your projects:

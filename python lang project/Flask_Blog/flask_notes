@@ -162,7 +162,9 @@ Working with forms:
     
 ***** API testing
 # create a unittest.Testcase object, to test all your functionality at once.
-    
+    !dont forget to define a teardown methode, to undo changes made by the test
+# follow test-driven development(tdd) when writing APIs
+    write test, fail test, write code, pass test, refactor. AND REPEAT!
 
 _______________________________________________________________________
 redirect and flash:

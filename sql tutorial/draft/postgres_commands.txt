@@ -1,5 +1,5 @@
  
- sudo su postgres -l 'startup postgress and enter shell, default user to login user's account'
+ sudo su postgres -l 'startup postgress and enter shell, default user to OS's loged in user's account'
  psql dbname 'psql is the cli for postgres, you can pass in username'
  \l 'list database'
  \dt 'list tables'

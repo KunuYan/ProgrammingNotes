@@ -312,6 +312,12 @@ user.posts
     -if you are happy with the change run flask db upgrade(or rollback if unhappy)
 # we dont have to call db.session.create_all() anymore
 
+***** pagination
+# when displaying Data, we don't want to display everything in a single page, so we paginate them.
+    page = request.args.get('page', 1, type=int) #taking the wanted page from uri
+    model =  Model.query.order_by(Model.something.desc()).paginate(page=page, per_page=5) # loading a specific page and displaying 5 object by page
+    
+# to display page selection(at the bottom of a website), check out flaskblog/templates/home.html
 _______________________________________________________________________
 Packaging your projects:
 ***** why package your flask projects
@@ -359,3 +365,17 @@ User authentications
 # to block guest from accessing links that requires authentication, use the login_required operators before the route
     @login_required
     def account('/account'):
+    
+_______________________________________________________________________
+Password reset
+***** using email
+# create a function in user model that generates a token
+
+# create a route for requeast to reset password
+    - check if inputed email address is related to an account
+    - call a funtion that send a link with the token to the email adress
+  
+# create a route reseting password
+    - takes a request(the only way to access this route with the correct token is by clicking the emailed link)
+    - verify token is legit
+    -update password for that user in the database
